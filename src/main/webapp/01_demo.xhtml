@@ -1,34 +1,34 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
 <f:view contentType="text/html">
-  <h:head>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  </h:head>
-  <h:body>
-    <h3>Példa</h3>
-    <p>Demonstráció</p>
-    <h:form id="f">
-      <div style="margin-bottom: 4px;">
-        <h:commandLink id="button1" value="Kattints rám!"
-                       action="01_demo?faces-redirect=true"
-                       actionListener="#{szemaforDemo.buttonClicked}">
-          <f:ajax render="uzenet1 uzenet2"/>
-        </h:commandLink>
-        <div>
-          uzenet1:
-          <h:outputText id="uzenet1" value="#{szemaforDemo.uzenet} (#{szemaforDemo.idopont})"/>
-        </div>
-        <div>
-          uzenet2:
-          <h:outputText id="uzenet2" value="#{szemaforDemo.bean.uzenet} (#{szemaforDemo.idopont})"/>
-        </div>
-      </div>
-    </h:form>
-  </h:body>
+    <h:head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    </h:head>
+    <h:body>
+        <h3>Példa</h3>
+        <p>Demonstráció</p>
+        <h:form id="f">
+            <div style="margin-bottom: 4px;">
+                <h:commandLink id="button1" value="Kattints rám!"
+                               action="01_demo?faces-redirect=true"
+                               actionListener="#{szemaforDemo.buttonClicked}">
+                    <f:ajax render="uzenet1 uzenet2"/>
+                </h:commandLink>
+                <div>
+                    uzenet1:
+                    <h:outputText id="uzenet1" value="#{szemaforDemo.uzenet} (#{szemaforDemo.idopont})"/>
+                </div>
+                <div>
+                    uzenet2:
+                    <h:outputText id="uzenet2" value="#{szemaforDemo.bean.uzenet} (#{szemaforDemo.idopont})"/>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
 </f:view>
 </html>

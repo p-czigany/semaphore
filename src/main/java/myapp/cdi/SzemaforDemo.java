@@ -16,13 +16,16 @@ public class SzemaforDemo {
 
   private static final Logger logger = LoggerFactory.getLogger(SzemaforDemo.class);
 
+  // todo: remove this logging
+  static {
+    logger.error("SzemaforDemo példányosítva");
+  }
+
   private String uzenet;
   private final Date idopont = new Date();
 
-  @Inject
-  private SzemaforKezelo kezelo;
-  @Inject
-  private SzemaforDemoBean bean;
+  @Inject private SzemaforKezelo kezelo;
+  @Inject private SzemaforDemoBean bean;
 
   private void vegrehajtZarolas(String kod, String muvelet) {
     Szemafor szemafor = kezelo.zarol(kod, muvelet);
@@ -36,11 +39,11 @@ public class SzemaforDemo {
   }
 
   public void buttonClicked(ActionEvent event) {
-    vegrehajtZarolas("H2", "próba");
-    ellenorizZarolas("H2", "teszt");
+//    vegrehajtZarolas("H2", "próba");
+//    ellenorizZarolas("H2", "teszt");
     uzenet = String.format("szD.bC :: clientId = '%s'", event.getComponent().getClientId());
     bean.setUzenet(uzenet);
-    logger.debug("szD.bC :: clientId = '{}'", event.getComponent().getClientId());
+    logger.error("szD.bC :: clientId = '{}'", event.getComponent().getClientId());
   }
 
   public String getUzenet() {
